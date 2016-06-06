@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+        <meta charset="utf-8" />
+        <title>FML Blog - Programming</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">FML Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/programming.html">Programming</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/lay-link-download-video-playlist-nhaccuatui-bang-python.html">Lấy link download video playlist nhaccuatui bằng python</a></h1>
+<footer class="post-info">
+        <span>Mon 06 June 2016</span>
+<span>| tags: <a href="/tag/python.html">python</a></span>
+</footer><!-- /.post-info --><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">lxml.html</span>
+<span class="kn">import</span> <span class="nn">lxml.etree</span>
+
+<span class="c1"># playlist link</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;http://www.nhaccuatui.com/video/nong-dan-hien-dai-modern-farmer-tap-1-vietsub-va.THb4WdUW7B5zA.html?listkey=kvvmU18SznJR&#39;</span> 
+
+<span class="k">def</span> <span class="nf">get_html</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">return html text that can be css selected</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">lxml</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">playlist</span> <span class="o">=</span> <span class="n">get_html</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+
+<span class="n">episode_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">playlist</span><span class="o">.</span><span class="n">cssselect</span><span class="p">(</span><span class="s1">&#39;#idScrllVideoInAlbum&amp;gt;li&amp;gt;a&#39;</span><span class="p">)]</span>
+
+<span class="n">xml_links</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">episode_links</span><span class="p">:</span>
+<span class="n">ep</span> <span class="o">=</span> <span class="n">get_html</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+<span class="n">xml_content</span> <span class="o">=</span> <span class="n">ep</span><span class="o">.</span><span class="n">cssselect</span><span class="p">(</span><span class="s1">&#39;meta[itemprop=&quot;embedURL&quot;]&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span>
+<span class="n">xml_link</span> <span class="o">=</span> <span class="n">xml_content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;file=&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">xml_links</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xml_link</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">xml_links</span><span class="p">:</span>
+<span class="n">xml</span> <span class="o">=</span> <span class="n">lxml</span><span class="o">.</span><span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xml</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//track/location&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+            </ol><!-- /#posts-list -->
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://fml.vn/">FML Group</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
