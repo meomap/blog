@@ -33,5 +33,10 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+# Additional configuration
+
+DEFAULT_DATE = 'fs'
 
 THEME = 'pelican-blueidea'
+
+DISPLAY_AUTHOR_ON_POSTINFO = True
