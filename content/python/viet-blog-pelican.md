@@ -148,6 +148,13 @@ Còn nhiều cú pháp nữa, xem chi tiết tại [đây](https://github.com/ad
 ## 1. Tạo virtualenv, kích hoạt và cài pelican, markdown vào virtualenv:
 ```
 ╭─htl@htl-homeserver  ~/pelican  
+╰─$ virtualenv -p $(which python3) venv
+Running virtualenv with interpreter /usr/local/bin/python3
+Using base prefix '/usr/local'
+New python executable in venv/bin/python3
+Also creating executable in venv/bin/python
+Installing setuptools, pip, wheel...done.
+╭─htl@htl-homeserver  ~/pelican  
 ╰─$ source ./venv/bin/activate
 (venv)╭─htl@htl-homeserver  ~/pelican  
 ╰─$ pip install pelican markdown
