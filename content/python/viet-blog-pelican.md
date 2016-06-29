@@ -18,7 +18,7 @@ Authors: htl
 ###### H6
 ```
 
-**Kết quả:** (lưu ý, xem source html của kết quả để biết chi tiết, việc trình bày có thể bị ảnh hưởng bới template của blog)
+**Kết quả:** (lưu ý, xem source html của kết quả để biết chính xác, việc trình bày có thể bị ảnh hưởng bới template của blog)
 
 # H1
 ## H2
