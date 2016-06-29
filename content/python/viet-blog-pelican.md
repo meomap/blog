@@ -18,7 +18,7 @@ Authors: htl
 ###### H6
 ```
 
-**Kết quả:**
+**Kết quả:** (lưu ý, xem source html của kết quả để biết chính xác, việc trình bày có thể bị ảnh hưởng bới template của blog)
 
 # H1
 ## H2
@@ -330,6 +330,6 @@ To git@github.com:fmltestblog/fmltestblog.github.io.git
 ```
 
 ### 5. Mở trình duyệt, truy cập http://username.github.io
-Blog của bạn đã online. Khi thêm 1 bài viết mới, hãy chạy lại từ bước [II.4](#4.-Tạo-file-html:) và push lên github.
+Blog của bạn đã online. Khi thêm 1 bài viết mới, hãy chạy lại từ bước **II.4** và push lên github.
 
 -htl-
