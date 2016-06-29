@@ -224,7 +224,8 @@ Done. Your new project is available at /home/htl/pelican/blog
 Đơn giản là chỉ cần tạo 1 file `.md` tại thư mục `/blog/content`, nội dung file được định dạng theo cú pháp markdown.
 
 Các thông tin (metadata) cần thiết cho 1 bài viết được ghi ngay trên đầu file. Metadata tối thiểu bắt buộc phải có là `Title`, ngoài ra với cấu hình mặc định thì nên thêm `Date`:
-```
+
+```markdown
 Title: Tiêu đề bài viết
 Date: 2016-06-28
 
@@ -257,7 +258,9 @@ Thử xem blog mình vừa viết trông như thế nào, dùng lệnh `make ser
 cd /home/htl/pelican/blog/output && python -m pelican.server
 ```
 Vào http://localhost:8000 để xem thử:
-![](./test-blog-pelican.png)
+
+![]({filename}../static/img/test-blog-pelican.png)
+
 
 # III. Upload lên github pages:
 
@@ -329,7 +332,11 @@ To git@github.com:fmltestblog/fmltestblog.github.io.git
  * [new branch]      master -> master
 ```
 
-### 5. Mở trình duyệt, truy cập http://username.github.io
+
+### 5. Mở trình duyệt, truy cập https://username.github.io
 Blog của bạn đã online. Khi thêm 1 bài viết mới, hãy chạy lại từ bước **II.4** và push lên github.
+
+Demo: [https://fmltestblog.github.io/](https://fmltestblog.github.io/)
+
 
 -htl-
