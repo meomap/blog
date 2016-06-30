@@ -36,7 +36,7 @@ Chữ đậm: **đậm** hoặc __đậm__.
 
 Nghiêng đậm: **_nghiêng đậm_** hoặc *__nghiêng đậm__*
 
-Gạch ngang chữ: ~~gạch ngang~~ ( ~:tilde)
+Gạch ngang chữ: <s>gạch ngang</s>
 ```
 
 **Kết quả:**
@@ -47,7 +47,7 @@ Chữ đậm: **đậm** hoặc __đậm__.
 
 Nghiêng đậm: **_nghiêng đậm_** hoặc *__nghiêng đậm__*
 
-Gạch ngang chữ: ~~gạch ngang~~ ( ~:tilde)
+Gạch ngang chữ: <s>gạch ngang</s>
 
 ### Link
 
