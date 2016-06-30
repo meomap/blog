@@ -36,7 +36,7 @@ DEFAULT_PAGINATION = 10
 
 DEFAULT_DATE = 'fs'
 
-THEME = 'pelican-blueidea'
+THEME = 'voidy-bootstrap'
 
 DISPLAY_AUTHOR_ON_POSTINFO = True
 
