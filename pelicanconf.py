@@ -39,3 +39,5 @@ DEFAULT_DATE = 'fs'
 THEME = 'pelican-blueidea'
 
 DISPLAY_AUTHOR_ON_POSTINFO = True
+
+STATIC_PATHS = ['images']

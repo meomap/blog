@@ -259,7 +259,7 @@ cd /home/htl/pelican/blog/output && python -m pelican.server
 ```
 Vào http://localhost:8000 để xem thử:
 
-![]({filename}../static/img/test-blog-pelican.png)
+![]({filename}/images/test-blog-pelican.png)
 
 
 # III. Upload lên github pages:
